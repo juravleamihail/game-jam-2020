@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &4
 LightmapSettings:
@@ -151,17 +151,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   diags:
+  - Bermire
   - Charlie
   - CommentModifier
   - CrazyCap
+  - DEMO_Condition
+  - demo_Narration
   - Example3Dialogue
   - Example4_dialogue
   - Item_LookUp
   - Laura
   - MrCube
   - NPCOnly
+  - QuestChartDemo
+  - TriggeredDude
   - Witch
-  assignedIndex: 2
+  assignedIndex: 3
   assignedID: 35452
   assignedDialogue: CrazyCap
   interactionCount: 0

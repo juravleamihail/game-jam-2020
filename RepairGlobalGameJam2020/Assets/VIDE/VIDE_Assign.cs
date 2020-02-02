@@ -5,6 +5,7 @@ using System.IO;
 using System;
 using MiniJSON_VIDE;
 using VIDE_Data;
+using UnityEngine.UI;
 
 public class VIDE_Assign : MonoBehaviour, ISerializationCallbackReceiver
 {
