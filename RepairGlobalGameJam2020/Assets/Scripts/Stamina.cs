@@ -13,10 +13,12 @@ public class Stamina : MonoBehaviour
     public int dayCounter = 1; //Number of days passed
     public bool npcHelped = false; //BlackSmith has helped an NPC, moves to the next
     bool gameOver = false;
+    public GameObject staminaGO;
 
     void Start()
     {
         currentStamina = maxStamina;
+        //staminaGO.
     }
 
     
@@ -42,6 +44,7 @@ public class Stamina : MonoBehaviour
                     currentStamina++; //Increase the value of currentMoney
                     moneyScript.RemoveMoney(5); //Remove set amount of money when buying stamina
                     dayCounter++;
+
                 }
             }    
         }

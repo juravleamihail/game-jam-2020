@@ -83,7 +83,7 @@ public class DayContent : MonoBehaviour
         }
     }
 
-    void EndOfTheDay()
+    public void EndOfTheDay()
     {
         nextSlide.SetActive(true);
         this.gameObject.SetActive(false);

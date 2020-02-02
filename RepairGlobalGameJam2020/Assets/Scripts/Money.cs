@@ -8,7 +8,7 @@ public class Money : MonoBehaviour
 
     public int currentMoney = 1; //Current Amount of Money
     public int startMoney = 10; //Amount of Money at Start
-    public Text moneyText; //create a text variable which will be used to update the Money Text
+    public Text coinsCounter; //create a text variable which will be used to update the Money Text
     bool helpedNpc = false;
     public int moneyToPass = 30;
     public bool dayPassed = false;
@@ -18,7 +18,7 @@ public class Money : MonoBehaviour
     void Start()
     {
         currentMoney = startMoney; //Set amount of money at Start
-        moneyText.text = currentMoney.ToString(); //convert the value of (int) currentMoney to a string for moneyText.
+        coinsCounter.text = currentMoney.ToString(); //convert the value of (int) currentMoney to a string for moneyText.
     }
 
     // Update is called once per frame
@@ -39,7 +39,7 @@ public class Money : MonoBehaviour
         if(helpedNpc)
         {
             currentMoney += moneyToAdd; //Increase the value of currentMoney
-            moneyText.text = currentMoney.ToString(); //convert the value of (int) currentMoney to a string for moneyText.
+            coinsCounter.text = currentMoney.ToString(); //convert the value of (int) currentMoney to a string for moneyText.
         }
         
     }
@@ -52,7 +52,7 @@ public class Money : MonoBehaviour
         else
         {
             currentMoney -= moneyToSubtract; //Decrease the value of currentMoney
-            moneyText.text = currentMoney.ToString(); //convert the value of (int) currentMoney to a string for moneyText.
+            coinsCounter.text = currentMoney.ToString(); //convert the value of (int) currentMoney to a string for moneyText.
         } 
     }
 }
