@@ -39,6 +39,8 @@ public class DayContent : MonoBehaviour
     private GameObject nextSlide;
     [SerializeField]
     private GameObject Dialogue;
+    [SerializeField]
+    private GameObject player;
     int customerCount = 0;
 
     private void OnEnable()
@@ -50,17 +52,19 @@ public class DayContent : MonoBehaviour
 
     private void VD_OnEnd(VIDE_Data.VD.NodeData data)
     {
+        if (data.extraData[0] == "Accept")
+        {
+            player.GetComponent<Money>().AddMoney(customers[customerCount].accepting.Gold);
+            player.GetComponent<Karma>().currentKarma += customers[customerCount].accepting.Karma;
+            player.GetComponent<Stamina>().currentStamina--;
+        }
+        else if (data.extraData[0] == "Decline")
+        {
+            player.GetComponent<Money>().AddMoney(customers[customerCount].declining.Gold);
+            player.GetComponent<Karma>().currentKarma += customers[customerCount].declining.Karma;
+        }
+
         customerCount++;
-
-        if(data.extraData[0] == "Accept")
-        {
-
-        }
-        else if(data.extraData[0] == "Decline")
-        {
-
-        }
-
         SpeakTo();
     }
 
